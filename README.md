@@ -36,14 +36,14 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 | Jump Box | Gateway  | 10.0.0.1   | Linux            |
 | Web-1    |          |            |                  |
 | Web-2     |          |            |                  |
-| TODO     |          |            |                  |
+| ELK Server     |          |            |                  |
 
 ### Access Policies
 
 The machines on the internal network are not exposed to the public Internet. 
 
 Only the JumpBox Provisioner machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- _TODO: Add whitelisted IP addresses_
+20.150.143.200, 75.142.18.11
 
 Machines within the network can only be accessed by SSH.
 - _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
