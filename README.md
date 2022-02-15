@@ -43,7 +43,7 @@ The configuration details of each machine may be found below.
 The machines on the internal network are not exposed to the public Internet. 
 
 Only the JumpBox Provisioner machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-20.150.143.200, 75.142.18.11
+Any, 75.142.18.11
 
 Machines within the network can only be accessed by SSH.
 The Jumpbox VM was allowed access to the ELK Server through the IP 20.106.98.144
@@ -86,8 +86,8 @@ In order to use the playbook, you will need to have an Ansible control node alre
 
 SSH into the control node and follow the steps below:
 - Copy the ELK_install_yml file to /etc/ansible
-- Update the _____ file to include...
-- Run the playbook, and navigate to ____ to check that the installation worked as expected.
+- Update the hosts file to include the webhost IPs as well as the Elk Server IP.
+- Run the playbook, and navigate to the Kibana URL which is local host IP plus port 5601 (http://10.0.1.8:5601) to check that the installation worked as expected.
 
 Answer the following questions to fill in the blanks:_
 Which file is the playbook? Where do you copy it? The playbook are .yml files which instruct which modules to install on a machine and are copied to the Ansible folder.
