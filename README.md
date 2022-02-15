@@ -25,8 +25,7 @@ Load balancing ensures that the application will be highly available, in additio
 This protects the security risk of DDos attacks by evenly distributing high volumes of traffic.  By using a jump box the network has a secure single point of entry that audits and authorizes traffic before allowing access to content within. 
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the logs and system operations and functionality.
-- What does Filebeat watch for?  Filebeat monitors and alerts to unusual activity in logs and logging activity.
--What does Metricbeat record?_
+The two monitoring 'beats' installed on the ELK server were filebeats and metricbeats.  Filebeat monitors and alerts to unusual activity in logs and logging access activity in the network.  Metricbeat monitors the system processes , CPU usage, and other functionality metrics from the virtual harware in the network.
 
 The configuration details of each machine may be found below.
 
@@ -47,20 +46,20 @@ Only the JumpBox Provisioner machine can accept connections from the Internet. A
 20.150.143.200, 75.142.18.11
 
 Machines within the network can only be accessed by SSH.
-- _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
+The Jumpbox VM was allowed access to the ELK Server through the IP 20.106.98.144
 
 A summary of the access policies in place can be found in the table below.
 
-| Name     | Publicly Accessible | Allowed IP Addresses |
-|----------|---------------------|----------------------|
-| Jump Box | Yes/No              | 10.0.0.1 10.0.0.2    |
-|          |                     |                      |
-|          |                     |                      |
+| **Name** | **Publicly Accessible** | **Allowed IP Addresses** |
+|----------|-------------------------|--------------------------|
+| Jump Box | yes                     | Any                      |
+| VM -1    | no                      | 20.106.98.144            |
+| VM -2    | no                      | 20.106.98.144            |
+| ELK VM   | no                      | 20.106.98.144            |
 
 ### Elk Configuration
 
-Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
-- _TODO: What is the main advantage of automating configuration with Ansible?_
+Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because provisioning, application deployment, and inter-network orchestration was simplified and automated.
 
 The playbook implements the following tasks:
 - _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
