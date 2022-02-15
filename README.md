@@ -32,8 +32,8 @@ The configuration details of each machine may be found below.
 | **Name** | **Function** | **IP Address** | **Operating System** |   |
 |----------|--------------|----------------|----------------------|---|
 | Jump Box | Gateway      | 10.1.0.7       | Linux                |   |
-| VM -1    | Web Server   | 10.1.0.12      | Linux                |   |
-| VM -2    | Web Server   | 10.1.0.8       | Linux                |   |
+| DWVA -1  | Web Server   | 10.1.0.12      | Linux                |   |
+| DWVA -2  | Web Server   | 10.1.0.8       | Linux                |   |
 | ELK VM   | Elk Server   | 10.2.0.4       | Linux                |   |
 |          |              |                |                      |   |
 |          |              |                |                      |   |
@@ -53,8 +53,8 @@ A summary of the access policies in place can be found in the table below.
 | **Name** | **Publicly Accessible** | **Allowed IP Addresses** |
 |----------|-------------------------|--------------------------|
 | Jump Box | yes                     | Any                      |
-| VM -1    | no                      | 20.106.98.144            |
-| VM -2    | no                      | 20.106.98.144            |
+| DWVA -1  | no                      | 20.106.98.144            |
+| DWVA -2  | no                      | 20.106.98.144            |
 | ELK VM   | no                      | 20.106.98.144            |
 
 ### Elk Configuration
@@ -62,9 +62,9 @@ A summary of the access policies in place can be found in the table below.
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because provisioning, application deployment, and inter-network orchestration was simplified and automated.
 
 The playbook implements the following tasks:
-- _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
-- ...
-- ...
+- Docker was installed to configue an Ansible container to automate and install the ELK container.
+- In the ansible folder on the jumpbox the command ansible-playbook install_elk.yml was run.
+- This installed the ELK playbook on the ELK host and prepared it to accept traffic from the DVWA VMs for monitoring.
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
