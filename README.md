@@ -52,7 +52,7 @@ A summary of the access policies in place can be found in the table below.
 
 | **Name** | **Publicly Accessible** | **Allowed IP Addresses** |
 |----------|-------------------------|--------------------------|
-| Jump Box | yes                     | Any                      |
+| Jump Box | yes                     | 75.142.18.11                     |
 | DWVA -1  | no                      | 20.106.98.144            |
 | DWVA -2  | no                      | 20.106.98.144            |
 | ELK VM   | no                      | 20.106.98.144            |
@@ -88,12 +88,13 @@ In order to use the playbook, you will need to have an Ansible control node alre
 SSH into the control node and follow the steps below:
 - Copy the ELK_install_yml file to /etc/ansible
 - Update the hosts file to include the webhost IPs as well as the Elk Server IP.
-- Run the playbook, and navigate to the Kibana URL which is local host IP plus port 5601 (http://10.0.1.8:5601) to check that the installation worked as expected.
+- Run the playbook, and navigate to the Kibana URL which is local host IP plus port 5601 (http://104.208.27.51:5601/app/kibana) to check that the installation worked as expected.
+- OR check from the command line: curl http://104.208.27.51:5601 
 
 Answer the following questions to fill in the blanks:_
 Which file is the playbook? Where do you copy it? The playbook are .yml files which instruct which modules to install on a machine and are copied to the Ansible folder.
 Which file do you update to make Ansible run the playbook on a specific machine? The Ansible config file is updated to designate what machines playbooks run on.
 How do I specify which machine to install the ELK server on versus which to install Filebeat on? The config files can be edited to determine which machines run the ELK server vs Filebeat.
-Which URL do you navigate to in order to check that the ELK server is running?  http://104.208.27.51:5601/app/kibana#/dashboard
+Which URL do you navigate to in order to check that the ELK server is running?  http://104.208.27.51:5601/app/kibana#/dashboard 
 
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
