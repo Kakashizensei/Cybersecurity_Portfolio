@@ -93,14 +93,21 @@ SSH into the control node and follow the steps below:
 - Run the playbook, and navigate to the Kibana URL which is local host IP plus port 5601 (http://104.208.27.51:5601/app/kibana) to check that the installation worked as expected.
 - OR check from the command line: curl http://104.208.27.51:5601 
 
-Answer the following questions: <br>
-Which file is the playbook and where do you copy it? <br>
+Answer the following questions: 
+
+Which file is the playbook and where do you copy it? 
+
 The playbook are .yml files which instruct which modules to install on a machine and are copied to the Ansible folder located in the directory /etc/ansible.
-Which file do you update to make Ansible run the playbook on a specific machine? <br>
-The Ansible config file is updated to designate what machines playbooks run on. <br>
-How do I specify which machine to install the ELK server on versus which to install Filebeat on? <br>
-The config files can be edited to determine which machines run the ELK server vs Filebeat. <br>
-Which URL do you navigate to in order to check that the ELK server is running? <br>
+
+Which file do you update to make Ansible run the playbook on a specific machine? 
+
+The Ansible config file is updated to designate what machines playbooks run on. 
+
+How do I specify which machine to install the ELK server on versus which to install Filebeat on? 
+
+The config files can be edited to determine which machines run the ELK server vs Filebeat.
+
+Which URL do you navigate to in order to check that the ELK server is running? 
 http://104.208.27.51:5601/app/kibana#/dashboard 
 
 
