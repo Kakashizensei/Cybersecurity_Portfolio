@@ -6,7 +6,9 @@ Diagrams/Azure_Cloud_Network.jpg
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the Ansible file may be used to install only certain pieces of it, such as Filebeat.
 
-Ansible/ELK_install_yml.txt
+install-elk.yml
+filebeat-playbook.yml
+metricbeat-playbook.yml
 
 This document contains the following details:
 - Description of the Topology
@@ -91,10 +93,14 @@ SSH into the control node and follow the steps below:
 - Run the playbook, and navigate to the Kibana URL which is local host IP plus port 5601 (http://104.208.27.51:5601/app/kibana) to check that the installation worked as expected.
 - OR check from the command line: curl http://104.208.27.51:5601 
 
-Answer the following questions to fill in the blanks:_
-Which file is the playbook? Where do you copy it? The playbook are .yml files which instruct which modules to install on a machine and are copied to the Ansible folder.
-Which file do you update to make Ansible run the playbook on a specific machine? The Ansible config file is updated to designate what machines playbooks run on.
-How do I specify which machine to install the ELK server on versus which to install Filebeat on? The config files can be edited to determine which machines run the ELK server vs Filebeat.
-Which URL do you navigate to in order to check that the ELK server is running?  http://104.208.27.51:5601/app/kibana#/dashboard 
+Answer the following questions:
+Which file is the playbook and where do you copy it?
+The playbook are .yml files which instruct which modules to install on a machine and are copied to the Ansible folder located in the directory /etc/ansible.
+Which file do you update to make Ansible run the playbook on a specific machine?
+The Ansible config file is updated to designate what machines playbooks run on.
+How do I specify which machine to install the ELK server on versus which to install Filebeat on? 
+The config files can be edited to determine which machines run the ELK server vs Filebeat.
+Which URL do you navigate to in order to check that the ELK server is running?
+http://104.208.27.51:5601/app/kibana#/dashboard 
 
-_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
+
