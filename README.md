@@ -14,8 +14,8 @@ This document contains the following details:
 - Description of the Topology
 - Access Policies
 - ELK Configuration
-  - Beats in Use
-  - Machines Being Monitored
+- Beats in Use
+- Machines Being Monitored
 - How to Use the Ansible Build
 
 
@@ -81,7 +81,9 @@ We have installed the following Beats on these machines:
 Filebeat and Metricbeat were sucessfully installed.
 
 These Beats allow us to collect the following information from each machine:
+
  Filebeat detects changes to the filesystem. Specifically, it is used to collect Apache logs.
+ 
  Metricbeat detects changes in system metrics, such as CPU usage. We use it to detect SSH login attempts, failed sudo escalations, and CPU/RAM statistics.
 
 ### Using the Playbook
@@ -97,7 +99,7 @@ Answer the following questions:
 
 Which file is the playbook and where do you copy it? 
 
-The playbook are .yml files which instruct which modules to install on a machine and are copied to the Ansible folder located in the directory /etc/ansible.
+The playbooks are .yml files which instruct which modules to install on a machine and are copied to the Ansible folder located in the directory /etc/ansible.
 
 Which file do you update to make Ansible run the playbook on a specific machine? 
 
@@ -107,7 +109,8 @@ How do I specify which machine to install the ELK server on versus which to inst
 
 The config files can be edited to determine which machines run the ELK server vs Filebeat.
 
-Which URL do you navigate to in order to check that the ELK server is running? 
+Which URL do you navigate to in order to check that the ELK server is running?
+
 http://104.208.27.51:5601/app/kibana#/dashboard 
 
 
