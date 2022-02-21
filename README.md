@@ -78,9 +78,9 @@ The following screenshot displays the result of running `docker ps` after succes
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
-Web-1 IP: 10.1.0.12
-Web-2 IP: 10.1.0.8
-
+- Web-1 IP: 10.1.0.12
+- Web-2 IP: 10.1.0.8
+- Web-3 IP: 10.1.0.10
 We have installed the following Beats on these machines:
 Filebeat and Metricbeat were sucessfully installed.
 
