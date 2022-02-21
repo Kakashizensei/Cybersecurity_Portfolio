@@ -47,7 +47,7 @@ The configuration details of each machine may be found below.
 The machines on the internal network are not exposed to the public Internet. 
 
 Only the JumpBox Provisioner machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-Any, 75.142.18.11
+Any, 75.142.20.22
 
 Machines within the network can only be accessed by SSH.
 The Jumpbox VM was allowed access to the ELK Server through the IP 20.106.98.144
@@ -56,7 +56,7 @@ A summary of the access policies in place can be found in the table below.
 
 | **Name** | **Publicly Accessible** | **Allowed IP Addresses** |
 |----------|-------------------------|--------------------------|
-| Jump Box | yes                     | 75.142.18.11             |
+| Jump Box | yes                     | 75.142.20.22            |
 | DVWA -1  | no                      | 20.106.98.144            |
 | DVWA -2  | no                      | 20.106.98.144            |
 | DVWA -3  | no                      | 20.106.98.144            |
