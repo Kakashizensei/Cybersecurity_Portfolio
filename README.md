@@ -36,10 +36,10 @@ The configuration details of each machine may be found below.
 | **Name** | **Function** | **IP Address** | **Operating System** |   |
 |----------|--------------|----------------|----------------------|---|
 | Jump Box | Gateway      | 10.1.0.7       | Linux                |   |
-| DWVA -1  | Web Server   | 10.1.0.12      | Linux                |   |
-| DWVA -2  | Web Server   | 10.1.0.8       | Linux                |   |
+| DVWA -1  | Web Server   | 10.1.0.12      | Linux                |   |
+| DVWA -2  | Web Server   | 10.1.0.8       | Linux                |   |
+| DVWA -3  | Web Server   | 10.2.0.10      | Linux                |   |
 | ELK VM   | Elk Server   | 10.2.0.4       | Linux                |   |
-|          |              |                |                      |   |
 |          |              |                |                      |   |
 
 ### Access Policies
@@ -56,11 +56,11 @@ A summary of the access policies in place can be found in the table below.
 
 | **Name** | **Publicly Accessible** | **Allowed IP Addresses** |
 |----------|-------------------------|--------------------------|
-| Jump Box | yes                     | 75.142.18.11                     |
-| DWVA -1  | no                      | 20.106.98.144            |
-| DWVA -2  | no                      | 20.106.98.144            |
+| Jump Box | yes                     | 75.142.18.11             |
+| DVWA -1  | no                      | 20.106.98.144            |
+| DVWA -2  | no                      | 20.106.98.144            |
+| DVWA -3  | no                      | 20.106.98.144            |
 | ELK VM   | no                      | 20.106.98.144            |
-
 ### Elk Configuration
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because provisioning, application deployment, and inter-network orchestration was simplified and automated.
